@@ -1,0 +1,32 @@
+{
+    "name": "salad-dressing/boilerplate",
+    "description": "SaladStack boilerplate extension",
+    "license": "MIT",
+    "type": "salad-section",
+    "autoload": {
+        "psr-4": {
+            "Salad\\Dressing\\Boilerplate\\": "src/"
+        }
+    },
+    "extra": {
+        "salad-extension": {
+            "title": "Salad Dressing Boilerplate",
+            "category": "feature",
+            "icon": "fas fa-image"
+        },
+        "resources": {
+            "migration": [
+                "CreateIboilerplateTable.php"
+            ]
+        },
+        "section": {
+            "render" : "base_boilerplate",
+            "style" : "assets/css/style.css",
+            "scrtipt" : "assets/js/script.js",
+            "extension" : "\\Salad\\Dressing\\Boilerplate\\Extensions\\TwigExtension"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.12"
+    }
+}
